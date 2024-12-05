@@ -8,10 +8,11 @@ import static utilities.JavaScriptUtility.scrollToElementsJS;
 public class FormsPage extends HomePage {
     private By practiceFormMenuItem = By.xpath("//li[@id ='item-0']/span[text()='Practice Form']");
 
-
-    public PracticeFormPage clickPracticeForm(){
+    public PracticeFormPage clickPracticeForm() {
         scrollToElementsJS(practiceFormMenuItem);
         click(practiceFormMenuItem);
         return new PracticeFormPage();
     }
+
+
 }

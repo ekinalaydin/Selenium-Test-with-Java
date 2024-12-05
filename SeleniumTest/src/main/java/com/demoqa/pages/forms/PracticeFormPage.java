@@ -7,6 +7,9 @@ import static utilities.JavaScriptUtility.scrollToElementsJS;
 
 public class PracticeFormPage extends FormsPage{
     private By femaleRadioButton = By.id("gender-radio-2");
+    private By sportsHobbyCheckbox = By.id("hobbies-checkbox-1");
+    private By readingHobbyCheckbox = By.id("hobbies-checkbox-2");
+    private By musicHobbyCheckbox = By.id("hobbies-checkbox-3");
 
     public void clickFemaleRadioButton() {
         scrollToElementsJS(femaleRadioButton);
@@ -17,5 +20,36 @@ public class PracticeFormPage extends FormsPage{
 
     public boolean isFemaleRadioButtonSelected() {
         return find(femaleRadioButton).isSelected();
+    }
+
+    public void clickSportsHobbyCheckbox() {
+        if(!find(sportsHobbyCheckbox).isSelected()){
+            scrollToElementsJS(sportsHobbyCheckbox);
+            clickJS(sportsHobbyCheckbox);
+        }
+    }
+    public void clickReadingHobbyCheckbox() {
+        if(!find(readingHobbyCheckbox).isSelected()){
+            scrollToElementsJS(readingHobbyCheckbox);
+            clickJS(readingHobbyCheckbox);
+        }
+    }
+    public void clickMusicHobbyCheckbox() {
+        if(!find(musicHobbyCheckbox).isSelected()){
+            scrollToElementsJS(musicHobbyCheckbox);
+            clickJS(musicHobbyCheckbox);
+        }
+
+    }
+    public void unclickReadingHobbyCheckbox() {
+        if(find(readingHobbyCheckbox).isSelected()){
+            scrollToElementsJS(readingHobbyCheckbox);
+            clickJS(readingHobbyCheckbox);
+        }
+    }
+
+    public boolean isReadingHobbyCheckboxSelected() {
+        return find(readingHobbyCheckbox).isSelected();
+
     }
 }
